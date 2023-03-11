@@ -1,0 +1,357 @@
+html,
+body {
+    color: #000;
+    font-family: 'RobotoL', sans-serif;
+    font-weight: 300;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'RobotoR';
+    font-weight: 400;
+    src: url('../fonts/Roboto-Regular.ttf');
+
+}
+
+@font-face {
+    font-family: 'RobotoL';
+    font-weight: 300;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+
+.row.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .row.no-gutter [class*='col-']:not(:first-child),
+  .row.no-gutter [class*='col-']:not(:last-child) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+.navbar a:hover{
+    color: #f50 !important;
+}
+
+  
+  
+/* ---------------------HEADER--------------------- */
+li.primary_menu_user a, li.primary_menu_profile a, li.primary_menu_logout a{
+    text-decoration: none;
+    color: #696969;
+  }
+
+nav span.primary_menu_user,
+nav span.primary_menu_logout {
+    border-left:1px solid #696969;
+}
+
+nav i.fa-house, .fa-user {
+    margin-right: 4px;
+}
+
+.header_line{
+    height:1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+ /* ---------------------BOX_SHADOW--------------------- */
+ section.hotel_filters,
+ section.favorites_vote{
+    box-shadow: 0px 0px 20px 8px rgb(134, 125, 125);
+ }
+
+/* ---------------------HOTEL_FILTERS_FAVORITES--------------------- */
+
+  section.hotel_filters,
+  section.favorites_vote{
+    padding: 25px;
+    width:auto;
+    background-color:white;
+    position:relative;
+  }
+
+section.hotel_filters .h2{
+    color: #f50;
+    font-family: 'RobotoL';
+}
+
+section.hotel_filters .form-select{
+    color: #f50;
+    font-size: medium;
+}S
+/* ---------------------HOTEL_LIST_ROOM_PAGE--------------------- */
+section.info .h2,
+section.room_info .h2{
+    font-family: 'RobotoL';
+    font-size: medium;
+}
+
+section.info .h3,
+section.room_info .h3{
+    font-family: 'RobotoL';
+    font-size: medium;
+    margin: 0;
+}
+
+section.info .h4,
+section.room_info .h4{
+    font-family: 'RobotoL';
+    font-size: small; 
+}
+
+.room_info{
+    margin: 0;
+}
+
+.find_hotel .btn-primary,
+.info a.btn-primary,
+.room_review .btn-primary,
+.room_details .btn-primary,
+.registerBtn,
+.loginBtn,
+.searchBtn{
+    background:#f50 !important;
+    border: 1px solid #f50 !important;
+    color: #ffffff;
+}
+
+.btn:focus{
+    box-shadow:none !important;
+}
+
+section.rooms .media{
+    width: 115%;
+}
+.left_line{
+    border-right:1px solid #fff; 
+}
+section.info {
+    border-left: 3px solid #f50;
+    padding-left: 2%;
+    font-weight: 300;
+    font-family: 'RobotoL';
+ }
+
+ section.page-title .h2{
+    font-weight: 300;
+    font-family: 'RobotoL';
+    background-color: #f50;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 4px 4px 4px;
+    letter-spacing: -2px;
+    line-height: 35px;
+}
+
+.info small{  
+    margin: 0;
+}
+.room_info .room_info_right_line,
+.room_info_profile .room_info_right_line{
+    border-right:1px solid #696969;
+}
+
+ .room_info .type_of_room,
+ .room_info .count_of_guests,
+ .room_info .check_in_out_date,
+ .room_info .room_price,
+ .room_info_profile .type_of_room,
+ .room_info_profile .count_of_guests,
+ .room_info_profile .check_in_out_date,
+ .room_info_profile .room_price{
+    font-size: 14px;
+    background-color:#E8E8E8;
+    font-weight: 300;
+    font-family: 'RobotoL';
+}
+
+ .room_info_line{
+     border-right: white 2px dotted;
+ }
+
+section.room_info .rooms{
+    font-weight: 300;
+    font-family: 'RobotoL';
+    background-color: #f50;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+ }
+
+ .room_details,
+ .room_review{
+    border-left: #f50 3px solid;
+}
+
+.reviews_line,
+.bottom_line{
+    border-top: 1px dotted grey;
+}
+
+.modal .close{
+    position:absolute;
+    color: #f50 !important;
+    font-size:25px !important;
+}
+
+/* ---------------------FOOTER--------------------- */
+footer{
+    margin: 0 auto;
+    width: 100%;
+    background-color:#C8C8C8;
+    border-top: 4px solid #787878;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ---------------------IMAGE_ANIMATION--------------------- */
+
+aside.media {
+    position: relative;
+    overflow: hidden;
+  }
+  aside.media * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+  }
+  aside.media img {
+    max-width: 100%;
+    vertical-align: top;
+  }
+  aside.media i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    color: #f50;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  aside.media a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  aside.media:hover i,
+  aside.media.hover i {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+/* ---------------------login_register--------------------- */
+
+    .background_image_login_register{
+        background: url("../storage/register_login_img.jpeg") no-repeat;
+        height: calc(96vh - 100px);
+        padding-top: 4%;
+        background-size:100% 100%;
+        width: auto;  
+    }
+    .right_eye_password {
+        position: relative;
+    }
+
+    .right_eye_password .pswd {
+        padding-right: 35px !important;
+    }
+
+    .right_eye_password i {
+        position: absolute;
+        right: 10px;
+        margin-top: -26px;
+        cursor: pointer;
+    }
+    .toggle_password.fa-solid{
+        color:SteelBlue;
+    }
+    .card-footer a{
+        color:#f50;
+    }
+   .card-footer a:hover{
+        color:#f50;
+   }
+
+   /* ---------------------@media (max-width: 1199px)--------------------- */
+@media (max-width: 1199px) {
+
+    .room_info_profile .room_info_right_line {
+        border-right:none;
+    }
+
+    .room_info .room_price{
+        width: 100%;
+    }
+
+    .room_info_profile .check_in_out_date,
+    .room_info_profile .type_of_room{
+        border-radius: 5px;
+    }
+}
+
+/* ---------------------@media (max-width: 992px)--------------------- */
+@media (max-width: 992px) {
+        section.rooms .media{
+            width: 25%;
+            margin-bottom: 2%;
+        }
+
+        aside.media i {
+            font-size: 80px;
+        }
+        
+        footer{
+            margin-bottom: 2%;
+        }
+}
+
+/* ---------------------@media (max-width: 767px)--------------------- */
+@media (max-width: 767px)  {
+
+    .room_info_line{
+        border-bottom: white 2px dotted;
+        border-right: 0;
+    }
+
+    .room_info .room_info_right_line {
+        border-right:none;
+    }
+
+    section.info,
+    section.room_info {
+        border-left:none;
+        padding-left: 0%;
+    }
+
+    .room_info .check_in_out_date,
+    .room_info .type_of_room{
+        border-radius: 5px;
+    }
+
+    .room_info .type_of_room,
+    .room_info .count_of_guests,
+    .room_info .check_in_out_date,
+    .room_info .room_price{
+    font-size: 14px;
+    }
+
+    nav span.primary_menu_user,
+    nav span.primary_menu_logout {
+    border-left:0px;
+    padding: 0;
+    }
+
+    .header_line{
+        width: 100%;
+    }
+    aside.media i {
+        font-size: 40px;
+    }
+}

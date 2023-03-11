@@ -1,0 +1,63 @@
+ .field .input_min, .field .input_max{
+  background-color: #E8E8E8;
+}
+.field .input_min:focus, .field .input_max:focus{
+  background-color: #E8E8E8;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.slider{
+  height: 8px;
+  position: relative;
+  background: rgb(238, 231, 231);;
+  border-radius: 5px;
+  border: 1px solid rgb(180, 180, 180);
+}
+.slider .progress{
+  height: 100%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(238, 231, 231);
+}
+.range_input{
+  position: relative;
+}
+.range_input input{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -moz-pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 3px solid white;
+  outline: rgb(116, 115, 115) solid 0.51px;
+  background: #f50;  
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+/* -----------mozilla_inputRange----------- */
+input[type="range"]::-moz-range-thumb{
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  border: 3px solid white;
+  outline: rgb(116, 115, 115) solid 0.51px;
+  background: #f50;  
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}

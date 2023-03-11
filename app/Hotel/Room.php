@@ -1,0 +1,89 @@
+<?php
+
+namespace Hotel;
+
+use PDO;
+use DateTime;
+use Hotel\BaseService;
+
+class Room extends BaseService
+{
+    public function get($roomId)
+    {
+        $parameters = [
+            ':room_id' => $roomId
+            ];
+            return $this->fetch('SELECT * FROM room INNER JOIN room_type ON room.type_id = room_type.type_id WHERE room_id = :room_id', $parameters); 
+    }
+
+    public function getCities()
+    {
+        //Get all cities
+        $cities = [];
+        $rows = $this->fetchAll('SELECT DISTINCT city FROM room');
+            foreach($rows as $row){
+                $cities[] = $row['city'];
+            }
+        return $cities;
+    }
+    
+    public function search($checkInDate, $checkOutDate, $city = '', $typeId = '', $guestsCount = '', $minPrice = '', $maxPrice = '')
+    {
+        //Setup parameters
+        $parameters = [
+            ':check_in_date' => $checkInDate->format(DateTime::ATOM),
+            ':check_out_date' => $checkOutDate->format(DateTime::ATOM),
+        ];
+
+        if (!empty($city)){
+            $parameters[':city'] = $city;
+        }
+
+        if (!empty($typeId)){
+            $parameters[':type_id'] = $typeId;
+        }
+
+        if (!empty($guestsCount)){
+            $parameters[':count_of_guests'] = $guestsCount;
+        }
+
+        if (!empty($minPrice)){
+            $parameters[':min_price'] = $minPrice;
+        }
+        if (!empty($maxPrice)){
+            $parameters[':max_price'] = $maxPrice;
+        }
+
+        //Build query
+        $sql = 'SELECT *, price as min_price, price as max_price FROM room INNER JOIN room_type ON room.type_id = room_type.type_id WHERE ';
+        if (!empty($city)){
+            $sql .= 'city = :city AND ';
+        }
+        if (!empty($typeId)){
+            $sql .= 'room.type_id = :type_id AND ';
+        }
+        if (!empty($guestsCount)){
+            $sql .= 'count_of_guests = :count_of_guests AND ';
+        }
+
+        if (!empty($minPrice)){
+            $sql .= 'price >= :min_price AND ';
+        }
+
+        if (!empty($maxPrice)){
+            $sql .= 'price <= :max_price AND ';
+        }
+        
+        $sql .= 'room.room_id NOT IN(
+                SELECT room_id
+                FROM booking
+                WHERE check_in_date <= :check_out_date AND check_out_date >= :check_in_date
+        ) ';
+
+        $sql .= 'ORDER BY price ASC';
+        
+        //Get results
+        return $this->fetchAll($sql, $parameters);
+       
+    }
+}
