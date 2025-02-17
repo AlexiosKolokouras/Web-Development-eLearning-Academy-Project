@@ -1,4 +1,4 @@
-# Web Development eLearning Academy Project
+# 📌 Project Description
 
 ## Overview
 
@@ -13,8 +13,8 @@ This project is a hotel management system built using PHP and MySQL. It allows u
 - Responsive web interface with a modern and user-friendly design.
 - Database schema (`hotel.sql`) for easy setup and deployment.
 - Uses **Bootstrap** for a responsive and professional UI.
-
-## Project Structure
+- 
+## 🏗 Project Structure
 
 The project is organized into the following directories:
 
@@ -92,7 +92,7 @@ Ensure you have the following installed on your system:
 - **Booking Management**: View, cancel, or modify existing bookings from the dashboard.
 - **User Profile**: Update personal details and track booking history.
 
-## How to Use the Project
+## 📂 How to Use the Project
 
 1. **Admin Panel:**
    - Access the admin panel by navigating to `http://localhost/Web-Development-eLearning-Academy-Project/admin/`
