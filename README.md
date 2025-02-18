@@ -1,5 +1,3 @@
-# Web Development eLearning Academy Project
-
 # 📌 Project Description
 
 ## Introduction
