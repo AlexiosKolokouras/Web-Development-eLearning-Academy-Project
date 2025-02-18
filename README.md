@@ -1,77 +1,86 @@
+# Web Development eLearning Academy Project
+
 # 📌 Project Description
 
-## Overview
+## Introduction
 
-This project is a hotel management system built using PHP and MySQL. It allows users to browse available rooms, view different room types, and manage their bookings. The application follows an MVC (Model-View-Controller) architecture for better code organization and maintainability.
+This project is a **Hotel Management System** developed using **PHP** and **MySQL**. It enables users to browse available rooms, view different room types, and manage their bookings efficiently. The application follows the **MVC (Model-View-Controller)** architecture for better code organization and maintainability.
 
-## Features
+## ✨ Features
 
-- Retrieve and filter available hotel rooms by city and type.
-- Secure user authentication with session management.
-- Booking system for reserving hotel rooms with real-time availability.
-- User dashboard for managing bookings and viewing reservation history.
-- Responsive web interface with a modern and user-friendly design.
-- Database schema (`hotel.sql`) for easy setup and deployment.
-- Uses **Bootstrap** for a responsive and professional UI.
-- 
-## 🏗 Project Structure
+- 🔍 **Search & Filter**: Find available hotel rooms by city and type.
+- 🔑 **User Authentication**: Secure login and session management.
+- 🏨 **Booking System**: Reserve hotel rooms with real-time availability tracking.
+- 📊 **User Dashboard**: Manage bookings and view reservation history.
+- 📱 **Responsive UI**: Built with Bootstrap for a professional and user-friendly design.
+- 🗄 **Database Schema**: Predefined `hotel.sql` file for easy database setup.
 
-The project is organized into the following directories:
+## 🏗️ Project Structure
 
-- `app/` - Contains the main application logic, including:
-  - `Models/` - Handles database interactions (e.g., `Room.php`, `User.php`, `Booking.php`).
-  - `Controllers/` - Manages HTTP requests and responses, routing, and business logic.
-  - `Services/` - Reusable functions for authentication, room filtering, and booking handling.
-- `boot/` - Initializes application settings, loads dependencies, and sets up environment variables.
-- `config/` - Configuration files for database connections and environment settings.
-- `database/` - Contains the `hotel.sql` file, which includes table structures for users, rooms, bookings, and reviews.
-- `public/` - Publicly accessible assets:
-  - `css/` - Contains stylesheets for frontend design.
-  - `js/` - JavaScript files for user interactivity and AJAX requests.
-  - `images/` - Stores media files such as room images and icons.
-- `views/` - PHP templates used for rendering the user interface.
+The project is structured as follows:
 
-## Technologies Used
+```
+Web-Development-eLearning-Academy-Project/
+├── app/
+│   ├── Controllers/   # Handles requests and business logic
+│   ├── Models/        # Database interaction (User, Room, Booking)
+│   ├── Services/      # Reusable functions for authentication & booking
+├── boot/              # Initializes app settings and dependencies
+├── config/            # Database configuration and environment settings
+├── database/          # Contains hotel.sql for database setup
+├── public/
+│   ├── css/          # Stylesheets
+│   ├── js/           # JavaScript & AJAX scripts
+│   ├── images/       # Room images & icons
+├── views/             # PHP templates for rendering UI
+```
 
-- **Backend**: PHP (Object-Oriented Programming, MVC structure)
-- **Database**: MySQL for storing user, room, and booking data.
-- **Frontend**: HTML, CSS, JavaScript, and Bootstrap for a responsive user experience.
-- **Session Management**: Secure user authentication and session tracking.
-- **AJAX & jQuery**: For dynamic updates and smooth interactions.
+## 🛠️ Technologies Used
 
-## Installation
+- **Backend**: PHP (OOP, MVC structure)
+- **Database**: MySQL (User, Room, Booking data)
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Session Management**: Secure authentication & tracking
+- **AJAX & jQuery**: Dynamic updates & smooth UI interactions
+
+## 📥 Installation Guide
 
 ### Prerequisites
 
-Ensure you have the following installed on your system:
+Ensure you have the following installed:
 
-- XAMPP (Apache, MySQL, PHP)
+- **XAMPP** (Apache, MySQL, PHP)
 
-### Setup Instructions Using XAMPP
+### Setup Instructions (Using XAMPP)
 
-1. **Download and Install XAMPP:**
-   - Download XAMPP from [Apache Friends](https://www.apachefriends.org/index.html) and install it on your system.
+1. **Download and Install XAMPP**
+
+   - Download from [Apache Friends](https://www.apachefriends.org/index.html) and install.
    - Start **Apache** and **MySQL** from the XAMPP Control Panel.
 
-2. **Clone the repository:**
+2. **Clone the Repository**
+
    ```sh
    git clone https://github.com/your-username/Web-Development-eLearning-Academy-Project.git
    ```
-   Or download the project as a ZIP file and extract it.
 
-3. **Move the project to XAMPP's `htdocs` directory:**
+   Or download and extract the ZIP file.
+
+3. **Move the Project to XAMPP's ****`htdocs`**** Directory**
+
    ```sh
    mv Web-Development-eLearning-Academy-Project C:\xampp\htdocs\
    ```
 
-4. **Create the database:**
-   - Open **phpMyAdmin** by navigating to `http://localhost/phpmyadmin/` in your browser.
-   - Click on **Databases**, enter `hotel` as the database name, and click **Create**.
-   - Select the `hotel` database and go to the **Import** tab.
-   - Click **Choose File**, select `hotel.sql` from the `database/` folder, and click **Go** to import the schema.
+4. **Create the Database**
 
-5. **Configure the database connection:**
-   - Open `config/database.php` and update the database credentials:
+   - Open **phpMyAdmin** (`http://localhost/phpmyadmin/`)
+   - Click **Databases**, enter `hotel` as the database name, and click **Create**.
+   - Select `hotel` database → **Import** tab → Upload `hotel.sql` from `database/` folder → Click **Go**.
+
+5. **Configure Database Connection**
+
+   - Open `config/database.php` and update credentials:
      ```php
      define('DB_HOST', 'localhost');
      define('DB_USER', 'root');
@@ -79,37 +88,35 @@ Ensure you have the following installed on your system:
      define('DB_NAME', 'hotel');
      ```
 
-6. **Run the project:**
-   - Open a web browser and navigate to:
+6. **Run the Project**
+
+   - Open a browser and navigate to:
      ```
      http://localhost/Web-Development-eLearning-Academy-Project/public/
      ```
 
-## Usage
+## 📌 Usage Guide
 
-- **User Registration & Login**: Create an account and log in securely.
-- **Room Search & Booking**: Browse available rooms, filter results, and make reservations.
-- **Booking Management**: View, cancel, or modify existing bookings from the dashboard.
-- **User Profile**: Update personal details and track booking history.
+### 🔹 User Experience
 
-## 📂 How to Use the Project
+- Register/Login securely.
+- Browse rooms and view details.
+- Book a room by selecting dates.
+- Manage bookings via dashboard.
 
-1. **Admin Panel:**
-   - Access the admin panel by navigating to `http://localhost/Web-Development-eLearning-Academy-Project/admin/`
-   - Log in with admin credentials (stored in the database).
-   - Manage users, rooms, and bookings.
+### 🔹 Admin Panel
 
-2. **User Experience:**
-   - Register or log in as a guest.
-   - Browse available rooms and view details.
-   - Book a room by selecting dates and completing the reservation.
-   - View your booking history and manage existing reservations.
+- Navigate to `http://localhost/Web-Development-eLearning-Academy-Project/admin/`
+- Login as admin (credentials stored in the database).
+- Manage users, rooms, and bookings.
 
-3. **Database Management:**
-   - Use `phpMyAdmin` to manage database records.
-   - Modify room types, prices, and availability directly from the database if needed.
+### 🔹 Database Management
 
-## License
+- Use `phpMyAdmin` to modify records.
+- Adjust room availability, prices, and user details.
 
-This project is licensed under the MIT License. Feel free to use and modify it as needed.
+---
 
+💡 **Happy Coding!** 🚀
+
+⚡ If you liked this project, don't forget to give a ⭐ on the repository!
