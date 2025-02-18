@@ -6,12 +6,12 @@ This project is a **Hotel Management System** developed using **PHP** and **MySQ
 
 ## ✨ Features
 
-- 🔍 **Search & Filter**: Find available hotel rooms by city and type.
-- 🔑 **User Authentication**: Secure login and session management.
-- 🏨 **Booking System**: Reserve hotel rooms with real-time availability tracking.
-- 📊 **User Dashboard**: Manage bookings and view reservation history.
-- 📱 **Responsive UI**: Built with Bootstrap for a professional and user-friendly design.
-- 🗄 **Database Schema**: Predefined `hotel.sql` file for easy database setup.
+- **Search & Filter**: Find available hotel rooms by city and type.
+-  **User Authentication**: Secure login and session management.
+-  **Booking System**: Reserve hotel rooms with real-time availability tracking.
+-  **User Dashboard**: Manage bookings and view reservation history.
+-  **Responsive UI**: Built with Bootstrap for a professional and user-friendly design.
+-  **Database Schema**: Predefined `hotel.sql` file for easy database setup.
 
 ## 🏗️ Project Structure
 
